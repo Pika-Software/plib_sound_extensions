@@ -79,7 +79,7 @@ if (CLIENT) then
     local http_Encode = http.Encode
     local isfunction = isfunction
 
-    function sound.TTS( text, flags, callback )
+    function sound.PlayTTS( text, flags, callback )
         ArgAssert( text, 1, 'string' )
         ArgAssert( flags, 2, 'string' )
 
