@@ -84,12 +84,8 @@ if (CLIENT) then
         ArgAssert( flags, 2, 'string' )
 
         sound_PlayURL('http://translate.google.com/translate_tts?tl=' .. cvars_String( 'gmod_language', 'en' ) .. '&ie=UTF-8&q=' .. http_Encode( text ) .. '&client=tw-ob', flags, function( channel )
-            if IsValid( channel ) then
-                if isfunction( callback ) then
-                    callback( channel )
-                end
-
-                channel:Play()
+            if IsValid( channel ) and isfunction( callback ) then
+                callback( channel )
             end
         end)
     end
