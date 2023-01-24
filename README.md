@@ -1,4 +1,4 @@
-# plib_sound_extensions
+# Sound Extensions
 A set of functions and methods extending the sound library.
 
 ## Requires
